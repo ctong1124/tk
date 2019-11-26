@@ -1,0 +1,23 @@
+@import "basscss";
+@import "basscss-colors";
+@import "basscss-background-colors";
+
+:root {
+  --h1: 70px;
+  --black: #222;
+  --lime: #cdebdb;
+}
+
+* {
+  margin: 0;
+  color: var(--black);
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: var(--lime);
+}
+
+.blah {
+  padding-left: 16px;
+}
