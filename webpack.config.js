@@ -10,33 +10,36 @@ module.exports = {
   // wil follow this for tutorial but can remove to create dist folder
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: './bundle.js'
+    filename: './bundle.js',
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
       },
       {
         test: /\.css$/,
-        loader: ['style-loader', 'css-loader', 'postcss-loader']
+        loader: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.(png|jpg)$/,
-        loader: 'file-loader'
-      }
-    ]
+        loader: 'file-loader',
+      },
+    ],
   },
   mode: 'development',
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html',
-      inject: 'body'
+      inject: 'body',
     }),
     new webpack.DefinePlugin({
-      API_URL: JSON.stringify(process.env.API_URL)
-    })
-  ]
-}
+      API_URL: JSON.stringify(process.env.API_URL),
+    }),
+  ],
+};

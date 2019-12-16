@@ -1,15 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 const RecipeDetail = ({
   style,
   recipe,
   className,
 }) => {
-  console.log('blahhhhh')
-  console.log('className', className);
   if(!recipe) {
     return (
-      <div style={style}>
+      <div style={style} className={classnames('h3 p2 bg-white italic center', className)}>
         <p>Please select a recipe to see the details.</p>
       </div>
 
@@ -25,10 +25,11 @@ const RecipeDetail = ({
     steps,
   } = recipe;
   return (
-    <div style={style} className={className}>
-      <h2>{name}</h2>
+    <div style={style} className={classnames('p2 bg-white', className)}>
+      <h2 className="h2">{name}</h2>
       <img
         width='400px'
+        className="fit"
         src={image}/>
       <div>
         <span>{category}</span>
@@ -48,6 +49,12 @@ const RecipeDetail = ({
       </ol>
     </div>
   );
+}
+
+RecipeDetail.propTypes = {
+  style: PropTypes.object,
+  recipe: PropTypes.object,
+  className: PropTypes.string,
 }
 
 export default RecipeDetail;
