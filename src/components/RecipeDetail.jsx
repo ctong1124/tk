@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { Link } from 'react-router-dom';
 
 const RecipeDetail = ({
   style,
@@ -23,6 +24,7 @@ const RecipeDetail = ({
     calories,
     ingredients,
     steps,
+    id,
   } = recipe;
   return (
     <div style={style} className={classnames('p2 bg-white', className)}>
@@ -38,15 +40,20 @@ const RecipeDetail = ({
       <h3>Ingredients</h3>
       <ul>
         {ingredients.map(ingredient => (
-          <li>{ingredient}</li>
+          <li key={ingredient}>{ingredient}</li>
         ))}
       </ul>
       <h3>Recipe</h3>
       <ol>
         {steps.map(step => (
-          <li>{step} </li>
+          <li key={step}>{step} </li>
         ))}
       </ol>
+      <Link
+        to={`/recipe/${id}`}
+      >
+        See more
+      </Link>
     </div>
   );
 }
