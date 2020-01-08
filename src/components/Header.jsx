@@ -20,7 +20,10 @@ HeaderLink.propTypes = {
 const Header = () => {
   return (
     <header className="flex items-center justify-between px4">
-      <h1 className="h1">Tong's Kitchen</h1>
+      <div>
+        <div className="h1">Tong's Kitchen</div>
+      </div>
+
       <nav>
         <HeaderLink to="/">Home</HeaderLink>
         <HeaderLink to="/favorites">Favorites</HeaderLink>
