@@ -5,6 +5,7 @@
 @import "./borders";
 @import "./typography";
 @import "./shame";
+@import "./sizes";
 
 :root {
   --black: #2C313B;
