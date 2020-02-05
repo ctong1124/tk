@@ -6,7 +6,7 @@ const RecipeList = ({
   style,
   recipes,
   favorites,
-  ...rest,
+  ...rest
 }) => {
   return (
     <ul className="list-reset">

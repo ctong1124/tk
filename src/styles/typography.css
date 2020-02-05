@@ -1,15 +1,45 @@
 :root {
   --h1: 70px;
   --h2: 50px;
+  --opacity-primary: 1;
+  --opacity-secondary: 0.7;
+  --color-text-primary: rgba(44, 49, 59, var(--opacity-primary));
+  --color-text-secondary:  rgba(44, 49, 59, var(--opacity-secondary));
+  --size-primary: 1em; /* 16px */
+  --size-secondary: 0.875em; /* 14px */
+  --line-height-primary: 1.5em; /* 24px */
+  --line-height-secondary: 1.375em; /* 22px */
 }
 
 * {
   margin: 0;
-  color: var(--black);
+  color: var(--color-text-primary);
   font-family: 'Work Sans', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   margin: 0.4em 0px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.bodyText {
+  color: var(--color-text-secondary);
+  font-size: var(--size-primary);
+  line-height: var(--line-height-primary);
+}
+
+.listItemPrimaryText {
+  font-size: var(--size-primary);
+  line-height: var(--line-height-primary);
+  font-weight: 600;
+}
+
+.listItemSecondaryText {
+  font-size: var(--size-secondary);
+  line-height: var(--line-height-secondary);
+  color: var(--color-text-secondary);
 }

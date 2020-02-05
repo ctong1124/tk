@@ -1,11 +1,9 @@
-@import "basscss";
-@import "basscss-colors";
-@import "basscss-background-colors";
 @import "./fonts";
 @import "./borders";
 @import "./typography";
 @import "./shame";
 @import "./sizes";
+@import "./colors";
 
 :root {
   --black: #2C313B;

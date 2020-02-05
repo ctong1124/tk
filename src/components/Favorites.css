@@ -1,0 +1,9 @@
+@import "../styles/colors.css";
+.px4 {
+  padding: 36px;
+  background-color: var(--errorRed);
+}
+
+.h2 {
+  font-size: 16px;
+}

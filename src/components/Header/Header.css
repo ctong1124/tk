@@ -1,0 +1,41 @@
+@import "../../styles";
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px;
+
+  & .logo {
+    display: flex;
+    height: 3em;
+
+    & img {
+      height: var(--size-xl);
+      width: var(--size-xl);
+    }
+
+    & .logoText {
+      flex-direction: row;
+      padding-left: var(--size-s);
+      white-space: pre-wrap;
+      font-size: 1.25em;     /* 20px */
+      line-height: 1.375em;  /* 22px */
+    }
+  }
+
+  & nav {
+    align-self: center;
+
+    & .headerLink {
+      color: var(--color-black);
+      text-decoration: none;
+      padding: 16px;
+      margin: 16px 0;
+      display: inline-block;
+    }
+  }
+
+
+
+}

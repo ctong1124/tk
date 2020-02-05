@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import logo from '../static/images/tk_logo.png';
+import cn from 'classnames';
+import logo from '../../static/images/tk_logo.png';
+import classes from './Header.css';
+
+console.log('classes', classes);
 
 const HeaderLink = ({children, ...props}) => (
   <NavLink
     exact
-    className="p1 mx2 black text-decoration-none"
+    className={classes.headerLink}
     activeClassName="bold"
     {...props}
   >
@@ -20,9 +24,10 @@ HeaderLink.propTypes = {
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between px4">
-      <div>
-        <img src={logo} alt="Logo" />;
+    <header className={classes.headerContainer}>
+      <div className={classes.logo}>
+        <img src={logo} alt="Logo" />
+        <div className={cn(classes.logoText, classes.bold)}>Tong's{"\n"}Kitchen</div>
       </div>
 
       <nav>
