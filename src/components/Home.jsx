@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Hero } from './common';
 import RecipeList from './RecipeList';
 import RecipeDetail from './RecipeDetail';
 
@@ -29,25 +30,28 @@ class Home extends React.Component {
     const { recipes, favorites } = this.props.state;
 
     return (
-      <div>
-        <main className="px4 flex">
-          <div>
-            <h2 className="h2">Recipes</h2>
-            <RecipeList
-              recipes={recipes}
-              favorites={favorites}
-              style={{ flex: 3 }}
-              onClick={this.onRecipeClick}
-              onFavorited={this.props.toggleFavorite}
+      <React.Fragment>
+        <Hero heroHeadline='Hero headline'/>
+        <div>
+          <main className="px4 flex">
+            <div>
+              <h2 className="h2">Recipes</h2>
+              <RecipeList
+                recipes={recipes}
+                favorites={favorites}
+                style={{ flex: 3 }}
+                onClick={this.onRecipeClick}
+                onFavorited={this.props.toggleFavorite}
+              />
+            </div>
+            <RecipeDetail
+              recipe={currentRecipe}
+              className="ml4"
+              style={{ flex: 5 }}
             />
-          </div>
-          <RecipeDetail
-            recipe={currentRecipe}
-            className="ml4"
-            style={{ flex: 5 }}
-          />
-        </main>
-      </div>
+          </main>
+        </div>
+      </React.Fragment>
     );
   }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Header from './Header';
 import Home from './Home';
-import Favorites from './Favorites';
+import About from './About';
 import Recipe from './Recipe';
 import NotFound from './NotFound';
 
@@ -51,9 +51,9 @@ class App extends React.Component {
               )}
             />
             <Route
-              path="/favorites"
+              path="/about"
               render={() => (
-                <Favorites state={this.state} toggleFavorite={this.toggleFavorite}/>
+                <About state={this.state} toggleFavorite={this.toggleFavorite}/>
               )}
             />
             <Route

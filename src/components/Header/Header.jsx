@@ -5,8 +5,6 @@ import cn from 'classnames';
 import logo from '../../static/images/tk_logo.png';
 import classes from './Header.css';
 
-console.log('classes', classes);
-
 const HeaderLink = ({children, ...props}) => (
   <NavLink
     exact
@@ -25,10 +23,12 @@ HeaderLink.propTypes = {
 const Header = () => {
   return (
     <header className={classes.headerContainer}>
-      <div className={classes.logo}>
-        <img src={logo} alt="Logo" />
-        <div className={cn(classes.logoText, classes.bold)}>Tong's{"\n"}Kitchen</div>
-      </div>
+      <NavLink to="/home">
+        <div className={classes.logo}>
+          <img src={logo} alt="Logo" />
+          <div className={cn(classes.logoText, classes.bold)}>Tong's{"\n"}Kitchen</div>
+        </div>
+      </NavLink>
 
       <nav>
         <HeaderLink to="/recipes">Recipes</HeaderLink>

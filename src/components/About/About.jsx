@@ -1,8 +1,8 @@
 import React from 'react';
-import RecipeList from './RecipeList';
-import classes from './Favorites.css';
+import RecipeList from '../RecipeList';
+import classes from './About.css';
 
-const Favorites = ({ state, toggleFavorite }) => (
+const About = ({ state, toggleFavorite }) => (
   <div className={classes.px4}>
     <h2 className={classes.h2}>Favorites</h2>
     <RecipeList
@@ -13,4 +13,4 @@ const Favorites = ({ state, toggleFavorite }) => (
   </div>
 );
 
-export default Favorites;
+export default About;
