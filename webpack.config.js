@@ -25,20 +25,30 @@ module.exports = {
       },
       {
         test: /\.css$/,
+        loader: 'style-loader!css-loader',
+        include: /flexboxgrid/
+      },
+      {
+        test: /\.css$/,
         use: [
-          { loader: 'style-loader' },
+          {
+            loader: 'style-loader',
+          },
           {
             loader: 'css-loader',
             options: {
               importLoaders: 1,
+              localsConvention: 'camelCase',
               modules: {
                 localIdentName: '[path]___[name]__[local]___[hash:base64:5]',
               },
-
             },
           },
-          { loader: 'postcss-loader' }
+          {
+            loader: 'postcss-loader',
+          }
         ],
+        exclude: /flexboxgrid/
       },
       {
         test: /\.(png|jpg)$/,

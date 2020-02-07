@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Hero } from './common';
-import RecipeList from './RecipeList';
-import RecipeDetail from './RecipeDetail';
+import { Hero } from '../common';
+import RecipeList from '../RecipeList';
+import RecipeDetail from '../RecipeDetail';
+import classes from './Home.css';
 
 class Home extends React.Component {
   constructor(props) {
@@ -33,24 +34,22 @@ class Home extends React.Component {
       <React.Fragment>
         <Hero heroHeadline='Hero headline'/>
         <div>
-          <main className="px4 flex">
+          <main>
             <div>
-              <h2 className="h2">Recipes</h2>
+              <h2 >Recipes</h2>
               <RecipeList
                 recipes={recipes}
                 favorites={favorites}
-                style={{ flex: 3 }}
                 onClick={this.onRecipeClick}
                 onFavorited={this.props.toggleFavorite}
               />
             </div>
             <RecipeDetail
               recipe={currentRecipe}
-              className="ml4"
-              style={{ flex: 5 }}
             />
           </main>
         </div>
+        <div>What the hell is going on</div>
       </React.Fragment>
     );
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
+import { Row, Col } from 'react-flexbox-grid';
 import classes from './Hero.css';
 
 const Hero = ({
@@ -10,16 +11,22 @@ const Hero = ({
   image,
 }) => {
   return (
-    <div className={classes.heroContainer}>
-      <div className={classes.textContainer}>
+    <React.Fragment>
+    <Row className={classes.heroContainer}>
+      <Col className={classes.textContainer}>
         <p classes={classes.preText}>{ heroPreText }</p>
         <h1 className={classes.heroHeadline}>{ heroHeadline }</h1>
         <p classes={classes.postText}>{ heroPostText }</p>
-      </div>
-      <div className={classes.mediaContainer}>
+      </Col>
+      <Col className={classes.mediaContainer}>
         <img src='https://picsum.photos/300/500' alt='hero image'></img>
-      </div>
-    </div>
+      </Col>
+    </Row>
+    <Row>
+      <Col xs={6}> blah </Col>
+      <Col xs={6}> blah </Col>
+    </Row>
+    </React.Fragment>
   );
 }
 
