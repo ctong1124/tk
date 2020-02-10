@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { NormalModuleReplacementPlugin } = require('webpack');
 
 require('dotenv').config();
 
@@ -65,6 +66,10 @@ module.exports = {
     new webpack.DefinePlugin({
       API_URL: JSON.stringify(process.env.API_URL),
     }),
+    new NormalModuleReplacementPlugin(
+      /node_modules\/flexboxgrid2\/dist\/flexboxgrid\.css/,
+      require.resolve('./src/styles/custom-flex-box-grid.css')
+    ),
   ],
   devServer: {
     historyApiFallback: true,

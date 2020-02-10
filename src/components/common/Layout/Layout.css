@@ -1,0 +1,26 @@
+@import "../../../styles";
+
+.layout-container {
+  margin-left: var(--size-default);
+  margin-right: var(--size-default);
+
+  @media (--screen-s) {
+    margin-left: var(--size-l);
+    margin-right: var(--size-l);
+  }
+
+  @media (--screen-m) {
+    margin-left: var(--size-3xl);
+    margin-right: var(--size-3xl);
+  }
+
+  @media (--screen-l) {
+    margin-left: var(--size-4xl);
+    margin-right: var(--size-4xl);
+  }
+
+  @media (--screen-xl) {
+    margin-left: var(--size-5xl);
+    margin-right: var(--size-5xl);
+  }
+}

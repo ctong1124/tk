@@ -13,12 +13,12 @@ const Hero = ({
   return (
     <React.Fragment>
     <Row className={classes.heroContainer}>
-      <Col className={classes.textContainer}>
+      <Col xs={6} className={classes.textContainer}>
         <p classes={classes.preText}>{ heroPreText }</p>
         <h1 className={classes.heroHeadline}>{ heroHeadline }</h1>
         <p classes={classes.postText}>{ heroPostText }</p>
       </Col>
-      <Col className={classes.mediaContainer}>
+      <Col xs={6}className={classes.mediaContainer}>
         <img src='https://picsum.photos/300/500' alt='hero image'></img>
       </Col>
     </Row>
