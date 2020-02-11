@@ -4,17 +4,12 @@
 @import "./shame";
 @import "./sizes";
 @import "./colors";
-@import "./custom-flex-box-grid";
-
-:root {
-  --black: #2C313B;
-  --background-gray: #F9F8F8;
-}
+@import "./media";
 
 * {
   margin: 0;
 }
 
 body {
-  background-color: var(--background-gray);
+  background-color: var(--color-background-gray);
 }

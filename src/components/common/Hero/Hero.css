@@ -1,0 +1,42 @@
+@import "../../../styles";
+
+.hero-container {
+  margin-bottom: var(--size-xl);
+
+  @media (min-width: 480px) {
+    align-items: center;
+    display: flex;
+    min-height: 400px;
+    overflow: visible;
+    position: relative;
+  }
+
+
+  & .text-container {
+
+    @media (min-width: 480px) {
+      flex: 0 1 100%;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  & .background {
+
+    @media (min-width: 480px) {
+      position: absolute;
+    }
+
+    & .text-background {
+      background: var(--color-white);
+    }
+
+    & .media-container {
+      background-image: url('https://picsum.photos/500/500');
+      height: 400px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}

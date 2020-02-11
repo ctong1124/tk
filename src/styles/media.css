@@ -1,0 +1,13 @@
+/* repeat of variables in custom-flex-box-grid.css to avoid circular dependency */
+:root {
+  --sm-min: 480px;
+  --md-min: 960px;
+  --lg-min: 1200px;
+  --xl-min: 1600px;
+}
+
+/* I can't figure these out will fix it later */
+@custom-media --media-s (min-width: var(--sm-min));  /* @media (min-width: 480px) {  */
+@custom-media --media-m (min-width: var(--md-min));  /* @media (min-width: 960px) {  */
+@custom-media --media-l (min-width: var(--lg-min));  /* @media (min-width: 1200px) {  */
+@custom-media --media-xl (min-width: var(--xl-min)); /* @media (min-width: 1600px) {  */

@@ -11,22 +11,20 @@ const Hero = ({
   image,
 }) => {
   return (
-    <React.Fragment>
-    <Row className={classes.heroContainer}>
-      <Col xs={6} className={classes.textContainer}>
-        <p classes={classes.preText}>{ heroPreText }</p>
-        <h1 className={classes.heroHeadline}>{ heroHeadline }</h1>
-        <p classes={classes.postText}>{ heroPostText }</p>
-      </Col>
-      <Col xs={6}className={classes.mediaContainer}>
-        <img src='https://picsum.photos/300/500' alt='hero image'></img>
-      </Col>
-    </Row>
-    <Row>
-      <Col xs={6}> blah </Col>
-      <Col xs={6}> blah </Col>
-    </Row>
-    </React.Fragment>
+    <div className={classes.heroContainer}>
+      <Row>
+        <Col xs={12} sm={6} className={classes.textContainer}>
+          <p classes={classes.preText}>{ heroPreText }</p>
+          <h1 className={classes.heroHeadline}>{ heroHeadline }</h1>
+          <p classes={classes.postText}>{ heroPostText }</p>
+        </Col>
+      </Row>
+      <Row className={cn(classes.stretchFullWidth, classes.background)}>
+        <Col xs={12} sm={6} className={classes.textBackground} />
+        <Col xs={12} sm={6} className={classes.mediaContainer}>
+        </Col>
+      </Row>
+    </div>
   );
 }
 

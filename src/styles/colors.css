@@ -1,4 +1,5 @@
 :root {
-  --errorRed: #e03030;
-  --color-black: black;
+  --color-background-gray: #F9F8F8;
+  --color-black: #2C313B;
+  --color-white: #FFFFFF;
 }

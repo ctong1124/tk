@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Row, Col } from 'react-flexbox-grid';
 import { Hero, Layout } from '../common';
 import RecipeList from '../RecipeList';
 import RecipeDetail from '../RecipeDetail';
@@ -29,11 +30,20 @@ class Home extends React.Component {
   render() {
     const { currentRecipe } = this.state;
     const { recipes, favorites } = this.props.state;
+    const layoutProps = {
+      xs: 12,
+      md: 3,
+    };
 
     return (
       <Layout>
         <Hero heroHeadline='Hero headline' heroPostText='Go to link'/>
-        <div>What the hell is going on</div>
+        <Row>
+          <Col {...layoutProps}><div className={classes.cardPlaceholder}></div></Col>
+          <Col {...layoutProps}><div className={classes.cardPlaceholder}></div></Col>
+          <Col {...layoutProps}><div className={classes.cardPlaceholder}></div></Col>
+          <Col {...layoutProps}><div className={classes.cardPlaceholder}></div></Col>
+        </Row>
       </Layout>
     );
   }

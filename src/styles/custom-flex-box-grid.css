@@ -2,6 +2,10 @@
 
 @import '../../node_modules/flexboxgrid2/src/flexboxgrid2.css';
 
+/*
+ * variables are repeated in media.css to avoid circular dependency
+ * make sure to keep in sync
+ */
 :root {
   --gutter-width: 16px;
   --xs-min: 0rem;
@@ -10,9 +14,3 @@
   --lg-min: 1200px;
   --xl-min: 1600px;
 }
-
-@custom-media --media-xs (width < --sm-min);
-@custom-media --media-s (width < --md-min);
-@custom-media --media-m (width < --lg-min);
-@custom-media --media-l (width < --xl-min);
-@custom-media --media-xl (width >= --xl-min);

@@ -1,3 +1,11 @@
+@import "../../styles";
+
 .blah {
   font-size: 36px;
+}
+
+.card-placeholder {
+  background-color: var(--color-white);
+  height: 200px;
+  border-radius: 2px;
 }
